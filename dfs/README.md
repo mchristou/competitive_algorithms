@@ -1,3 +1,5 @@
+# Depth First search 
+
 In the example given as input, the graph has 6 nodes and 7 edges. 
 Each subsequent line represents an edge between two nodes. The graph is represented as follows:
 

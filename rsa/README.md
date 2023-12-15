@@ -1,11 +1,30 @@
-The first implementation (simple_rsa) is a standard implementation that it is not using the OpenSSL library. It generates random numbers using the random library, the mersenne prime, and the uniform distribution (for the C++ part) to make them as random as possible. It is utilizing the Euclidean method for finding the greatest common divisor, and a simple modular inverse function, as well as a simplistic modular exponentiation function. In our code we use Carmichael's totient function instead of Euler's. The p and q numbers (prime numbers used for the generation of keys) are chosen randomly by the code, and are printed along with the private and public keys.
+# RSA
 
-This RSA algorithm implementation is done as simply as possible and the code provided is not safe for any production system. It is missing large prime numbers, padding, and utilizes the simplest primality test to ensure that the small numbers picked are prime. PLEASE DO NOT USE THIS CODE FOR ANY PRODUCTION SYSTEM.
+The first implementation (simple_rsa) is a standard implementation that it is not using the OpenSSL library. It generates random numbers
+using the random library, the mersenne prime, and the uniform distribution (for the C++ part) to make them as random as possible. It is
+utilizing the Euclidean method for finding the greatest common divisor, and a simple modular inverse function, as well as a simplistic modular
+exponentiation function. In our code we use Carmichael's totient function instead of Euler's. The p and q numbers (prime numbers used for the
+generation of keys) are chosen randomly by the code, and are printed along with the private and public keys.
 
-The second implementation (openssl_rsa) is using the OpenSSL library to produce random keys that are cryptographically secure and to encrypt and decrypt messages. This implementation also includes padding, error checking, and displays the encrypted and decrypted message, as it was entered by the user. This implementation does not print the prime numbers, public or private keys, or the totient function. The reason behind this is because it is not something done when this code is in production, and we tried to adhere to those standards.
+This RSA algorithm implementation is done as simply as possible and the code provided is not safe for any production system. It is missing
+large prime numbers, padding, and utilizes the simplest primality test to ensure that the small numbers picked are prime. 
 
-NOTE: For the openssl_rsa Python implementation we used the cryptography library. This library provides cryptographic functions and aims to provide a simple and easy-to-use interface that prioritizes safety and ease of use. It uses a backend of OpenSSL with some parts written in C for performance reasons. It exposes both high-level and low-level cryptographic primitives. The low-level interfaces have the concept of "hazmat"  which means that they should be used with caution, while the high-level API focuses on providing default options that are secure and safe. It should also be noted that this library is widely used, most notably by Mozilla.
+#### PLEASE DO NOT USE THIS CODE FOR ANY PRODUCTION SYSTEM.
 
-NOTE_2: For the Python implementation of the simple_rsa algorithm, we used the SymPy library which is written entirely in Python and does not require any exteral libraries. It is easy to read and write and it performs a wide variety of algebraic operations like expansion, factoring, radicals, exponentials, logarithms, integration, etc. and it can generate code for a variety of programming languages besides Python, like C and C++ among others.
+The second implementation (openssl_rsa) is using the OpenSSL library to produce random keys that are cryptographically secure and to encrypt
+and decrypt messages. This implementation also includes padding, error checking, and displays the encrypted and decrypted message, as it was
+entered by the user. This implementation does not print the prime numbers, public or private keys, or the totient function. The reason behind
+this is because it is not something done when this code is in production, and we tried to adhere to those standards.
+
+NOTE: For the openssl_rsa Python implementation we used the cryptography library. This library provides cryptographic functions and aims to
+provide a simple and easy-to-use interface that prioritizes safety and ease of use. It uses a backend of OpenSSL with some parts written in C
+for performance reasons. It exposes both high-level and low-level cryptographic primitives. The low-level interfaces have the concept of "hazmat"
+which means that they should be used with caution, while the high-level API focuses on providing default options that are secure and safe.
+It should also be noted that this library is widely used, most notably by Mozilla.
+
+NOTE_2: For the Python implementation of the simple_rsa algorithm, we used the SymPy library which is written entirely in Python and does not
+require any exteral libraries. It is easy to read and write and it performs a wide variety of algebraic operations like expansion, factoring,
+radicals, exponentials, logarithms, integration, etc. and it can generate code for a variety of programming languages besides Python, like C and C++
+among others.
 For more on this library, visit: https://www.sympy.org/en/index.html
 

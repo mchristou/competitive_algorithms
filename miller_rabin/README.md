@@ -1,3 +1,5 @@
+# Miller Rabin primality test
+
 The code here asks the user for a number and finds its prime factors using the Miller-Rabin primality test.
 Please keep in mind that Miller-Rabin is a probabilistic algorithm, and it may not always yield the correct
 prime factors. That being said, it is a better algorithm in determining the primality of a number than other
